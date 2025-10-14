@@ -69,6 +69,7 @@ Resultados encontrados: [
         ...
     },
 ]
+```
 
 # Arquitetura do Sistema
 
