@@ -68,7 +68,7 @@ O projeto foi dividido em alguns arquivos pra ficar mais organizado:
 * `src/lib.rs`: Define a parte "biblioteca" do projeto, pra que os testes e o `main` possam usar os outros módulos.
 * `src/engine.rs`: É o coração do projeto. Tem a lógica do motor de busca.
 * `src/models.rs`: Define como é a `struct` de um Produto.
-* `src/tokenizer.rs`: Tem a função que quebra os textos em palavras-chave.
+* `src/tokenizer.rs`: src/tokenizer.rs: Tem a função de tokenização, que processa os textos: converte para minúsculas, quebra em palavras e remove 'stop words' (palavras comuns como 'e', 'de', 'para') para tornar a busca mais precisa.
 
 # Algoritmos e Estruturas de Dados
 
@@ -81,11 +81,11 @@ A parte principal do projeto são as estruturas de dados que a gente escolheu pr
 2.  **Repositório de Produtos:**
     * **Como funciona:** Outro `HashMap` que simplesmente guarda todos os produtos, usando o ID como chave. Isso serve para pegar os dados completos do produto no final da busca.
 
-O **algoritmo de busca** faz o seguinte:
-1.  Quebra a frase da busca em palavras (tokens).
-2.  Para cada palavra, pega a lista de IDs de produtos no Índice Invertido.
-3.  Faz a **interseção** dessas listas para achar os IDs que aparecem em todas elas.
-4.  No final, busca os produtos completos usando esses IDs.
+O **algoritmo de busca** segue os seguintes passos:
+1.  A consulta do usuário é processada pelo `tokenizer`. Este processo **converte o texto para minúsculas, quebra a frase em palavras-chave (tokens) e remove *stop words*** (palavras comuns como 'e', 'para', 'um', etc.).
+2.  Para cada token relevante, o conjunto de IDs de produtos correspondente é recuperado do Índice Invertido.
+3.  É calculada a **interseção** entre todos os conjuntos de IDs para encontrar os produtos que contêm *todos* os termos importantes da busca.
+4.  No final, os dados completos dos produtos são buscados no repositório principal usando os IDs resultantes.
 
 # Desempenho e Escalabilidade
 
