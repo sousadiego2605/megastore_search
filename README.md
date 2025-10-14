@@ -61,6 +61,15 @@ Resultados encontrados: [
 ]
 ```
 
+Buscando por: 'notebook para jogos' (a palavra 'para' é ignorada)
+Resultados encontrados: [
+    Product {
+        id: 1,
+        name: "Notebook Gamer Pro",
+        ...
+    },
+]
+
 # Arquitetura do Sistema
 
 O projeto foi dividido em alguns arquivos pra ficar mais organizado:
