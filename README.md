@@ -1,18 +1,18 @@
 # Sistema de Busca Otimizado para Catálogo de Produtos - MegaStore
 
-## 📜 Descrição do Projeto
+##  Descrição do Projeto
 
 Este é um projeto da faculdade para a matéria de Estrutura de Dados. O objetivo era criar um sistema de busca rápido para a loja "MegaStore", usando a linguagem Rust.
 
 O sistema de busca antigo da loja era lento, então a gente usou a estrutura de **Índice Invertido** pra conseguir encontrar produtos no catálogo de forma quase instantânea.
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 * **Linguagem:** Rust
 * **Gerenciador de Pacotes:** Cargo
 * **Bibliotecas:** `serde` (para lidar com os dados do produto)
 
-## 🚀 Como Executar o Projeto
+##  Como Executar o Projeto
 
 Pra rodar o projeto, siga os passos no seu terminal:
 
@@ -28,14 +28,14 @@ Pra rodar o projeto, siga os passos no seu terminal:
     ```
     Isso vai compilar e rodar o código principal, que já tem alguns produtos e buscas de exemplo.
 
-## ✅ Como Executar os Testes
+ # Como Executar os Testes
 
 Para rodar os testes e verificar se a lógica de busca está funcionando certo, use o comando:
 ```bash
 cargo test
 ```
 
-## 💡 Exemplos de Uso
+# Exemplos de Uso
 
 Ao rodar `cargo run`, o programa vai mostrar os seguintes exemplos no terminal:
 
@@ -61,7 +61,7 @@ Resultados encontrados: [
 ]
 ```
 
-## 🏗️ Arquitetura do Sistema
+# Arquitetura do Sistema
 
 O projeto foi dividido em alguns arquivos pra ficar mais organizado:
 * `src/main.rs`: Programa principal que roda a demonstração.
@@ -70,7 +70,7 @@ O projeto foi dividido em alguns arquivos pra ficar mais organizado:
 * `src/models.rs`: Define como é a `struct` de um Produto.
 * `src/tokenizer.rs`: Tem a função que quebra os textos em palavras-chave.
 
-## 🧠 Algoritmos e Estruturas de Dados
+# Algoritmos e Estruturas de Dados
 
 A parte principal do projeto são as estruturas de dados que a gente escolheu pra garantir a velocidade:
 
@@ -87,7 +87,7 @@ O **algoritmo de busca** faz o seguinte:
 3.  Faz a **interseção** dessas listas para achar os IDs que aparecem em todas elas.
 4.  No final, busca os produtos completos usando esses IDs.
 
-## 📈 Desempenho e Escalabilidade
+# Desempenho e Escalabilidade
 
 * **Velocidade:** O sistema é rápido porque não precisa olhar produto por produto a cada busca. Ele vai direto nas palavras-chave do índice.
 * **Memória:** O ponto negativo é que tudo fica guardado na memória RAM. Isso deixa o sistema rápido, mas consome mais memória.
