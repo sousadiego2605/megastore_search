@@ -106,6 +106,3 @@ O **algoritmo de busca** segue os seguintes passos:
 
 ---
 Projeto acadêmico feito para a matéria de Estrutura de Dados.
-
----
-Projeto acadêmico feito para a matéria de Estrutura de Dados.
